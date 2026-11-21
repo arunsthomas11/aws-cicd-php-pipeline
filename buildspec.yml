@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Packaging PHP app"
+      - sed -i 's/\r$//' scripts/*.sh
+      - chmod +x scripts/*.sh
+artifacts:
+  files:
+    - index.php
+    - appspec.yml
+    - scripts/**/*
